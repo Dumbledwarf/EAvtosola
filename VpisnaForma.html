@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Dodajanje terminov</title>
 
 
 <script type="module">
@@ -11,7 +11,7 @@
 </script>
 
 
-<script type="module" src="index.js"></script>
+<script src="index.js"></script>
 
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -22,18 +22,20 @@
 
 <body>
 
-<form action="druga.html">
+<form id = "forma" action="druga.html">
   <label for="datum_ura">Datum in ura:</label>
   <input type="datetime-local" id="datum_ura" name="datum_ura"><br><br>
-  <label for="lokacija">Lokacija:</label>
-  <input type="text" id="lokacija" name="lokacija" value="Kotnikova 19, 1000 Ljubljana"><br><br>
+  <label for="address">Naslov:</label>
+  <input type="text" id="address" name="address" value="Kotnikova 19"><br><br>
+  <label for="city">Mesto:</label>
+  <input type="text" id="city" name="city" value="Ljubljana"><br><br>
   <label for="vrsta_izpita">Vrsta izpita:</label>
   <select name="vrsta_izpita" id="vrsta_izpita">
     <option value="PP">Prva pomoc</option>
     <option value="CPP">Cestno prometni izpit</option>
     <option value="Izpit">Vozniski izpit</option>
   </select><br><br>
-  <input type="submit" value="Submit" onclick="myFun()">
+  <input type="button" value="Submit" onclick="checkData()">
 </form> 
 
 </body>

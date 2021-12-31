@@ -18,6 +18,18 @@ function parseURLParams(url) {
     return parms;
 }
 
+function checkData(){
+	var dat_ura = document.getElementById("datum_ura");
+	var address = document.getElementById("address");
+	var city = document.getElementById("city");
+	if(address.value == "" || city.value == "" || dat_ura.value == "")
+		alert("Prosimo vnesite vse podatke");
+	else{
+		var form = document.getElementById("forma");
+        form.submit();
+	}
+}
+
 function myFun() {
 	// Import the functions you need from the SDKs you need
   
@@ -45,11 +57,14 @@ function myFun() {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
     });
-	var pom = parseURLParams(window.location.href)
-	console.log(pom)
+	var pom = parseURLParams(window.location.href);
+	var datumura = pom["datum_ura"][0].split("T");
+	datumura[0] = datumura[0].replace(/-/g,".");
 	db.collection(pom["vrsta_izpita"][0]).add({
-    DatumUra: pom["datum_ura"],
-    Lokacija: pom["lokacija"],
+    date: datumura[0],
+	hour: datumura[1],
+    address: pom["address"][0],
+    city: pom["city"][0]
 
 })
 .then((docRef) => {
