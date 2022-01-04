@@ -21,20 +21,19 @@
 </head>
 
 <body>
-blabla
 <form id = "forma" action="druga.html">
-  <label for="datum_ura">Datum in ura:</label>
-  <input type="datetime-local" id="datum_ura" name="datum_ura"><br><br>
-  <label for="address">Naslov:</label>
-  <input type="text" id="address" name="address" value="Kotnikova 19"><br><br>
-  <label for="city">Mesto:</label>
-  <input type="text" id="city" name="city" value="Ljubljana"><br><br>
   <label for="vrsta_izpita">Vrsta izpita:</label>
   <select name="vrsta_izpita" id="vrsta_izpita">
     <option value="PP">Prva pomoc</option>
     <option value="CPP">Cestno prometni izpit</option>
     <option value="Izpit">Vozniski izpit</option>
   </select><br><br>
+  <label for="datum_ura">Datum in ura:</label>
+  <input type="datetime-local" id="datum_ura" name="datum_ura"><br><br>
+  <label for="address">Naslov:</label>
+  <input type="text" id="address" name="address" value="Kotnikova 19"><br><br>
+  <label for="city">Mesto:</label>
+  <input type="text" id="city" name="city" value="Ljubljana"><br><br>
   <input type="button" value="Submit" onclick="checkData()">
 </form> 
 

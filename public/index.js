@@ -64,7 +64,8 @@ function myFun() {
     date: datumura[0],
 	hour: datumura[1],
     address: pom["address"][0],
-    city: pom["city"][0]
+    city: pom["city"][0],
+	taken: false
 
 })
 .then((docRef) => {
