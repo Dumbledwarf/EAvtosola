@@ -9,7 +9,7 @@
       import { getFirestore, doc, getDoc, getDocs, collection } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
     </script>
 
-
+	<script src="index.js"></script>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -22,9 +22,9 @@
   <body>
     <div id="wrapper-login">
         <div id="prijava">eAvtošola - prijava</div><br><br>
-        <form>
-            <div class="center"><input type="text" value="Uporabniško ime..."></div>
-            <div class="center"><input type="text" value="Geslo..."></div>
+        <form action="index.html">
+            <div class="center"><input type="text" id = "username" placeholder="Uporabniško ime..."></div>
+            <div class="center"><input type="password" id = "password" placeholder="Geslo..."></div>
             <div class="center"><input type="submit" value="Prijavi se"></div>
         </form>
     </div>

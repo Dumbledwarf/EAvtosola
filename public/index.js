@@ -70,9 +70,27 @@ function myFun() {
 })
 .then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
+	
+window.location.href = "http://localhost/index.html?";
 })
 .catch((error) => {
     console.error("Error adding document: ", error);
 });
 });
+
+}
+
+function login()
+{
+	var username = document.getElementById("username");
+	var pw = document.getElementById("password");
+
+	
+		// All future sign-in request now include tenant ID.
+	firebase.auth().signInWithEmailAndPassword(username.value, pw.value)
+	  .then(function(result) {
+		console.log(result);
+	  }).catch(function(error) {
+		console.log(error);
+	  });
 }
